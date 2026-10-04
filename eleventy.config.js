@@ -10,7 +10,15 @@ module.exports = function(eleventyConfig) {
       .getFilteredByGlob("src/posts/*.md")
       .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
   });
+eleventyConfig.addFilter("youtubeId", function(url) {
+  if (!url) return "";
 
+  const match = url.match(
+    /(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([^?&/]+)/
+  );
+
+  return match ? match[1] : "";
+});
   eleventyConfig.addFilter("fechaEs", function(value) {
     if (!value) return "";
     const d = new Date(value);
