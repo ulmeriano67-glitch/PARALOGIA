@@ -57,7 +57,7 @@ collections:
         widget: "string"
         required: false
 
-      - label: "Video de YouTube (opcional)"
+      - label: "Video de YouTube"
         name: "youtube_url"
         widget: "string"
         required: false
@@ -66,3 +66,44 @@ collections:
       - label: "Contenido"
         name: "body"
         widget: "markdown"
+
+  - name: "pages"
+    label: "Páginas del sitio"
+    files:
+      - label: "Información de PARALOGIA"
+        name: "paginas"
+        file: "src/_data/paginas.json"
+        format: "json"
+
+        fields:
+          - label: "Sobre PARALOGIA"
+            name: "sobre"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Texto principal", name: "texto1", widget: "text" }
+              - { label: "Segundo texto", name: "texto2", widget: "text" }
+
+          - label: "Contacto"
+            name: "contacto"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Texto", name: "texto", widget: "text" }
+              - { label: "Correo electrónico", name: "email", widget: "string" }
+
+          - label: "Política de privacidad"
+            name: "privacidad"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Texto principal", name: "texto1", widget: "text" }
+              - { label: "Segundo texto", name: "texto2", widget: "text" }
+
+          - label: "Términos y condiciones"
+            name: "terminos"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Texto principal", name: "texto1", widget: "text" }
+              - { label: "Segundo texto", name: "texto2", widget: "text" }
