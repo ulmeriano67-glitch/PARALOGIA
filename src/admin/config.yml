@@ -67,6 +67,40 @@ collections:
         name: "body"
         widget: "markdown"
 
+  - name: "games"
+    label: "Juegos"
+    label_singular: "Juego"
+    folder: "src/games"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+
+    fields:
+      - label: "Nombre del juego"
+        name: "title"
+        widget: "string"
+
+      - label: "Descripción"
+        name: "description"
+        widget: "text"
+
+      - label: "Imagen de portada"
+        name: "image"
+        widget: "image"
+        required: false
+
+      - label: "Ruta o enlace del juego"
+        name: "game_url"
+        widget: "string"
+        hint: "Ejemplo: /juegos/laberinto/"
+
+      - label: "Instrucciones"
+        name: "body"
+        widget: "markdown"
+        required: false
+
   - name: "pages"
     label: "Páginas del sitio"
     files:
