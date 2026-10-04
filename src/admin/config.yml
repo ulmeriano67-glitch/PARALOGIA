@@ -27,5 +27,8 @@ collections:
       - { label: "Descripción corta", name: "description", widget: "text" }
       - { label: "Categoría", name: "category", widget: "string", required: false }
       - { label: "Imagen de portada", name: "image", widget: "image", required: false }
-      - { label: "Texto alternativo de imagen", name: "image_alt", widget: "string", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { label: "Imagen de portada", name: "image", widget: "image", required: false }
+- { label: "Texto alternativo de imagen", name: "image_alt", widget: "string", required: false }
+- { label: "Video de YouTube (opcional)", name: "youtube_url", widget: "string", required: false, hint: "Pega aquí el enlace completo del video de YouTube" }
+- { label: "Contenido", name: "body", widget: "markdown" }
+      
