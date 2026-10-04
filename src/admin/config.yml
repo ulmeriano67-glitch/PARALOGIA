@@ -2,14 +2,18 @@ backend:
   name: github
   repo: ulmeriano67-glitch/PARALOGIA
   branch: main
+
 site_url: https://paralogia.netlify.app
 display_url: https://paralogia.netlify.app
+
 media_folder: "src/uploads"
 public_folder: "/uploads"
+
 slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "-"
+
 collections:
   - name: "posts"
     label: "Publicaciones"
@@ -21,14 +25,44 @@ collections:
     format: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} — {{date}}"
+
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
-      - { label: "Descripción corta", name: "description", widget: "text" }
-      - { label: "Categoría", name: "category", widget: "string", required: false }
-      - { label: "Imagen de portada", name: "image", widget: "image", required: false }
-      - { label: "Imagen de portada", name: "image", widget: "image", required: false }
-- { label: "Texto alternativo de imagen", name: "image_alt", widget: "string", required: false }
-- { label: "Video de YouTube (opcional)", name: "youtube_url", widget: "string", required: false, hint: "Pega aquí el enlace completo del video de YouTube" }
-- { label: "Contenido", name: "body", widget: "markdown" }
-      
+      - label: "Título"
+        name: "title"
+        widget: "string"
+
+      - label: "Fecha"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+
+      - label: "Descripción corta"
+        name: "description"
+        widget: "text"
+
+      - label: "Categoría"
+        name: "category"
+        widget: "string"
+        required: false
+
+      - label: "Imagen de portada"
+        name: "image"
+        widget: "image"
+        required: false
+
+      - label: "Texto alternativo de imagen"
+        name: "image_alt"
+        widget: "string"
+        required: false
+
+      - label: "Video de YouTube (opcional)"
+        name: "youtube_url"
+        widget: "string"
+        required: false
+        hint: "Pega aquí el enlace completo del video de YouTube"
+
+      - label: "Contenido"
+        name: "body"
+        widget: "markdown"
