@@ -3,4 +3,22 @@ layout: base.njk
 title: Contacto
 permalink: /contacto/index.html
 ---
-<section class="section"><div class="container"><div class="page-box"><h1>Contacto</h1><p>Sustituye este texto por tu correo profesional para colaboraciones o mensajes.</p><p><strong>Email:</strong> tu-correo@ejemplo.com</p><p class="notice">El formulario siguiente es visual. Para recibir mensajes deberás conectarlo a un servicio de formularios.</p></div></div></section>
+
+<section class="section">
+  <div class="container">
+    <div class="page-box">
+
+      <h1>{{ paginas.contacto.titulo }}</h1>
+
+      <p>{{ paginas.contacto.texto }}</p>
+
+      <p>
+        <strong>Correo:</strong>
+        <a href="mailto:{{ paginas.contacto.email }}">
+          {{ paginas.contacto.email }}
+        </a>
+      </p>
+
+    </div>
+  </div>
+</section>
