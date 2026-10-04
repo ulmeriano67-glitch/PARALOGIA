@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const c=document.getElementById("cookieNotice"),a=document.getElementById("acceptCookies");if(c&&localStorage.getItem("paralogiaCookies")==="accepted")c.classList.add("hidden");if(a)a.addEventListener("click",()=>{localStorage.setItem("paralogiaCookies","accepted");c.classList.add("hidden")})});

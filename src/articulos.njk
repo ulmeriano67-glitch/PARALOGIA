@@ -1,0 +1,6 @@
+---
+layout: base.njk
+title: Artículos
+permalink: /articulos/index.html
+---
+<section class="section"><div class="container"><h1 class="section-title">Artículos</h1><p class="section-intro">Archivo de historias, misterios y reconstrucciones narrativas de PARALOGIA.</p><div class="grid">{% for post in collections.posts %}<article class="card">{% if post.data.image %}<a href="{{ post.url }}"><img class="card-image" src="{{ post.data.image }}" alt="{{ post.data.image_alt or post.data.title }}"></a>{% else %}<div class="card-media">ARCHIVO</div>{% endif %}<div class="card-body"><h3>{{ post.data.title }}</h3><p>{{ post.data.description or "Historia de PARALOGIA." }}</p><a class="read-more" href="{{ post.url }}">Leer →</a></div></article>{% endfor %}</div></div></section>

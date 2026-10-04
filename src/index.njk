@@ -1,0 +1,7 @@
+---
+layout: base.njk
+title: Inicio
+description: Misterios, archivos extraños y sucesos que desafían la realidad.
+---
+<section class="hero"><div class="container hero-content"><h1>PARALOGIA</h1><p>Misterios, archivos extraños y sucesos que desafían la realidad.</p><p class="tagline">“Historias que quizá nunca debieron ser encontradas.”</p><div class="actions"><a class="btn primary" href="/articulos/">Explorar historias</a><a class="btn" href="/videos/">Ver videos</a></div></div></section>
+<section class="section"><div class="container"><h2 class="section-title">Historias recientes</h2><p class="section-intro">Las nuevas publicaciones creadas desde el panel de administración aparecerán aquí automáticamente.</p><div class="grid">{% for post in collections.posts %}{% if loop.index <= 6 %}<article class="card">{% if post.data.image %}<a href="{{ post.url }}"><img class="card-image" src="{{ post.data.image }}" alt="{{ post.data.image_alt or post.data.title }}"></a>{% else %}<div class="card-media">ARCHIVO {{ loop.index }}</div>{% endif %}<div class="card-body"><h3>{{ post.data.title }}</h3><p>{{ post.data.description or "Nueva historia de PARALOGIA." }}</p><a class="read-more" href="{{ post.url }}">Leer historia →</a></div></article>{% endif %}{% endfor %}</div><div class="ad-slot">ESPACIO PREPARADO PARA FUTURO ANUNCIO DE ADSENSE</div></div></section>
