@@ -1,4 +1,69 @@
 ---
 layout: base.njk
 ---
-<section class="section"><div class="container content-layout"><article class="article"><h1>{{ title }}</h1><div class="meta">PARALOGIA · {{ date | fechaEs }}{% if category %} · {{ category }}{% endif %}</div>{% if image %}<img class="post-image" src="{{ image }}" alt="{{ image_alt or title }}">{% endif %}{{ content | safe }}<div class="ad-slot">ESPACIO PREPARADO PARA FUTURO ANUNCIO DE ADSENSE</div><p><strong>¿Qué explicación le darías a este caso?</strong></p></article><aside><div class="sidebar-box"><h3>PARALOGIA</h3><p>Misterios, archivos extraños y reconstrucciones narrativas.</p></div><div class="sidebar-box"><h3>Más contenido</h3><p><a class="read-more" href="/articulos/">Más artículos</a><br><a class="read-more" href="/videos/">Videos</a></p></div></aside></div></section>
+
+<section class="section">
+  <div class="container content-layout">
+
+    <article class="article">
+
+      <h1>{{ title }}</h1>
+
+      <div class="meta">
+        PARALOGIA · {{ date | fechaEs }}
+        {% if category %} · {{ category }}{% endif %}
+      </div>
+
+      {% if image %}
+      <img
+        class="post-image"
+        src="{{ image }}"
+        alt="{{ image_alt or title }}"
+      >
+      {% endif %}
+
+      {{ content | safe }}
+
+      {% set youtube_id = youtube_url | youtubeId %}
+
+      {% if youtube_id %}
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}"
+          title="{{ title }}"
+          allowfullscreen>
+        </iframe>
+      </div>
+      {% endif %}
+
+      <div class="ad-slot">
+        ESPACIO PREPARADO PARA FUTURO ANUNCIO DE ADSENSE
+      </div>
+
+      <p>
+        <strong>¿Qué explicación le darías a este caso?</strong>
+      </p>
+
+    </article>
+
+    <aside>
+
+      <div class="sidebar-box">
+        <h3>PARALOGIA</h3>
+        <p>
+          Misterios, archivos extraños y reconstrucciones narrativas.
+        </p>
+      </div>
+
+      <div class="sidebar-box">
+        <h3>Más contenido</h3>
+        <p>
+          <a class="read-more" href="/articulos/">Más artículos</a><br>
+          <a class="read-more" href="/videos/">Videos</a>
+        </p>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
