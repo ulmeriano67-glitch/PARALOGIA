@@ -1,0 +1,22 @@
+{
+  "sobre": {
+    "titulo": "Sobre PARALOGIA",
+    "texto1": "PARALOGIA es un proyecto dedicado a misterios, archivos extraños, relatos, ciencia ficción, fenómenos inexplicables y reconstrucciones narrativas.",
+    "texto2": "Algunas publicaciones pueden presentar historias ficticias, teorías o recreaciones con fines de entretenimiento. Cuando corresponda, se indicará claramente."
+  },
+  "contacto": {
+    "titulo": "Contacto",
+    "texto": "Para colaboraciones, propuestas o consultas relacionadas con PARALOGIA puedes comunicarte mediante el siguiente correo.",
+    "email": "tu-correo@ejemplo.com"
+  },
+  "privacidad": {
+    "titulo": "Política de privacidad",
+    "texto1": "PARALOGIA respeta la privacidad de sus visitantes. Esta página describe de forma general cómo puede tratarse la información relacionada con el uso del sitio.",
+    "texto2": "Si incorporamos servicios de analítica, publicidad como Google AdSense u otras herramientas de terceros, esta política será actualizada para reflejar los servicios utilizados."
+  },
+  "terminos": {
+    "titulo": "Términos y condiciones",
+    "texto1": "El contenido de PARALOGIA está destinado principalmente al entretenimiento y la divulgación.",
+    "texto2": "Algunas historias pueden ser ficción, recreaciones o hipótesis. No deben interpretarse automáticamente como acontecimientos reales cuando así se indique."
+  }
+}
