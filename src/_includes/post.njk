@@ -35,7 +35,17 @@ layout: base.njk
         </iframe>
       </div>
       {% endif %}
-
+{% if video_mp4 %}
+  <video
+    controls
+    playsinline
+    preload="metadata"
+    style="width: 100%; height: auto; display: block; margin: 24px 0; border-radius: 10px;"
+  >
+    <source src="{{ video_mp4 }}" type="video/mp4">
+    Tu navegador no puede reproducir este video.
+  </video>
+{% endif %}
       <div class="ad-slot">
         ESPACIO PREPARADO PARA FUTURO ANUNCIO DE ADSENSE
       </div>
