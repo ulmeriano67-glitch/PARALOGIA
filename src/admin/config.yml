@@ -62,7 +62,11 @@ collections:
         widget: "string"
         required: false
         hint: "Pega aquí el enlace completo del video de YouTube"
-
+      - label: "Video MP4"
+        name: "video_mp4"
+        widget: "file"
+        required: false
+        hint: "Sube aquí un video MP4 para reproducirlo directamente en la publicación"
       - label: "Contenido"
         name: "body"
         widget: "markdown"
