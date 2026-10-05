@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#020806">
+  <title>Escapa de la Base Anunnaki | PARALOGIA</title>
+  <meta name="description" content="Minijuego 3D de PARALOGIA: encuentra tres núcleos y escapa de la base Anunnaki.">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}</script>
+</head>
+<body>
+<div id="game">
+  <canvas id="gameCanvas" aria-label="Juego 3D"></canvas>
+
+  <div id="hud" class="hidden" aria-live="polite">
+    <div class="hudBox"><b>PARALOGIA // A-17</b><div id="objective"></div></div>
+    <div class="hudBox right"><div id="cores"></div><div id="time"></div></div>
+    <div id="crosshair">+</div>
+    <div id="message"></div>
+    <div id="danger" class="hidden"></div>
+  </div>
+
+  <div id="menu" class="screen">
+    <div class="panel">
+      <div class="eyebrow">PARALOGIA // ARCHIVO INTERACTIVO</div>
+      <h1 id="menuTitle"></h1>
+      <p id="menuStory" class="story"></p>
+      <div class="language-row">
+        <button id="langEs" class="secondary active" type="button">ESPAÑOL</button>
+        <button id="langEn" class="secondary" type="button">ENGLISH</button>
+      </div>
+      <div class="mission"><strong id="missionTitle"></strong><p id="missionText"></p></div>
+      <div id="controlsText" class="controls"></div>
+      <button id="startBtn" class="primary" type="button"></button>
+      <p id="desktopNote" class="note"></p>
+    </div>
+  </div>
+
+  <div id="pause" class="screen hidden">
+    <div class="panel small">
+      <div class="eyebrow">PARALOGIA // A-17</div>
+      <h2 id="pauseTitle"></h2>
+      <p id="pauseText"></p>
+      <button id="resumeBtn" class="primary" type="button"></button>
+      <button id="restartPause" class="secondary wide" type="button"></button>
+    </div>
+  </div>
+
+  <div id="end" class="screen hidden">
+    <div class="panel small">
+      <div class="eyebrow">PARALOGIA // A-17</div>
+      <h2 id="endTitle"></h2>
+      <p id="endText"></p>
+      <div id="endStats" class="mission"></div>
+      <button id="restartBtn" class="primary" type="button"></button>
+    </div>
+  </div>
+
+  <div id="loading" class="loading"><div class="spinner"></div><span>Cargando base / Loading base...</span></div>
+  <div id="unsupported" class="screen hidden"><div class="panel small"><h2>WebGL</h2><p>Tu navegador no pudo iniciar el juego 3D. Prueba con Chrome, Edge o Firefox actualizado.</p></div></div>
+</div>
+<script type="module" src="./game.js"></script>
+</body>
+</html>
