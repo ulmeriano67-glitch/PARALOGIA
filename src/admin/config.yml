@@ -1,8 +1,8 @@
-backend:
+backend:  
   name: github
   repo: ulmeriano67-glitch/PARALOGIA
   branch: main
-
+  site_domain: paralogia.netlify.app
 site_url: https://paralogia.netlify.app
 display_url: https://paralogia.netlify.app
 
